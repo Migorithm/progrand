@@ -1,0 +1,24 @@
+[package]
+name = "stc-k8s"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+[dependencies]
+
+tokio = { version = "*", features = [
+    "rt",
+    "time",
+    "macros",
+] }
+kube = { version = "*", features = ["runtime", "derive"] }
+k8s-openapi = { version = "*", features = ["latest"] }
+
+
+clap = { version = "*", features = ["derive","env"] } 
+Inflector="*"
+serde = {version="*",features=["derive"]}
+serde_json = "*"
+
